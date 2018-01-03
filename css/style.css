@@ -4,3 +4,6 @@ span.error {
 .hide {
 	display: none;
 }
+table thead tr th {
+	text-align: left;
+}
