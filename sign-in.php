@@ -33,9 +33,11 @@
 			$errorMessages['password'] = 'Invalid password.';
 		}
 		// Validation passed, set authentication session and redirect user to index.php
-		$_SESSION['user'] = $user;
-		header('Location: index.php');
-		die();
+		if (empty($errorMessages)) {
+			$_SESSION['user'] = $user;
+			header('Location: index.php');
+			die();
+		}
 	}
 ?>
 <!DOCTYPE html>
